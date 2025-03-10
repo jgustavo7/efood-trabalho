@@ -24,6 +24,7 @@ type CardProps = {
   tagType?: string | undefined
   tagHighlight: boolean | undefined
   to?: string
+  image: string
   handleClick?: () => void
 }
 
@@ -39,6 +40,7 @@ const Card = ({
   tagType,
   tagHighlight,
   to,
+  image,
   handleClick
 }: CardProps) => {
   function renderTypeButton(kind: string) {

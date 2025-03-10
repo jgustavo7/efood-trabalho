@@ -11,7 +11,6 @@ class Product {
   tagType?: string | undefined
   tagHighlight: boolean | undefined
   to?: string
-  image: string
   handleClick?: () => void
 
   constructor(
@@ -26,7 +25,6 @@ class Product {
     rating?: string,
     tagType?: string,
     to?: string,
-    image: string,
     handleClick?: () => void
   ) {
     this.id = id
@@ -40,7 +38,6 @@ class Product {
     this.rating = rating
     this.tagType = tagType
     this.to = to
-    this.image = image
     this.handleClick = handleClick
   }
 }

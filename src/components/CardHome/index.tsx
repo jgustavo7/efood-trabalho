@@ -25,6 +25,7 @@ const CardHome = ({ product }: Props) => (
           tagType={product.tagType}
           tagHighlight={product.tagHighlight}
           cover={product.cover}
+          image={''}
         />
       </div>
     ))}
