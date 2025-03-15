@@ -35,7 +35,7 @@ const restaurantes: Product[] = [
     iconName: 'Italiana',
     rating: '5.0',
     tagType: 'italiana',
-    tagHighlight: true,
+    tagHighlight: false,
     to: 'link'
   },
   {
@@ -50,7 +50,7 @@ const restaurantes: Product[] = [
     iconName: 'Italiana',
     rating: '5.0',
     tagType: 'italiana',
-    tagHighlight: true,
+    tagHighlight: false,
     to: 'link'
   },
   {
@@ -65,7 +65,7 @@ const restaurantes: Product[] = [
     iconName: 'Italiana',
     rating: '5.0',
     tagType: 'italiana',
-    tagHighlight: true,
+    tagHighlight: false,
     to: 'link'
   },
   {
@@ -80,7 +80,7 @@ const restaurantes: Product[] = [
     iconName: 'Italiana',
     rating: '5.0',
     tagType: 'italiana',
-    tagHighlight: true,
+    tagHighlight: false,
     to: 'link'
   },
   {
@@ -95,7 +95,7 @@ const restaurantes: Product[] = [
     iconName: 'Italiana',
     rating: '5.0',
     tagType: 'italiana',
-    tagHighlight: true,
+    tagHighlight: false,
     to: 'link'
   }
 ]
