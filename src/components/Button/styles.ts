@@ -21,6 +21,7 @@ const baseButton = css<ButtonProps>`
 
 export const ButtonContainer = styled.button<ButtonProps>`
   ${baseButton}
+  color: ${Cores.text};
   cursor: pointer;
 `
 
