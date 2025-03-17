@@ -10,6 +10,7 @@ import {
 } from './styles'
 
 import logo from '../../assets/imagens/logo.svg'
+import { Container } from '../../styles'
 
 export type HeaderProps = {
   title?: string
@@ -18,11 +19,14 @@ export type HeaderProps = {
 
 const Header = ({ textContent, title }: HeaderProps) => (
   <HeaderContainer>
-    <div>
+    <Container>
       <Link to="/">
         <img src={logo} alt="efood" />
       </Link>
-    </div>
+      <TextContainer>
+        <Text>{textContent}</Text>
+      </TextContainer>
+    </Container>
   </HeaderContainer>
 )
 

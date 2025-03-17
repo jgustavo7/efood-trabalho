@@ -15,7 +15,7 @@ const baseButton = css<ButtonProps>`
   font-weight: 700;
   text-align: center;
   background-color: ${(props) =>
-    props.$coresMode === 'primary' ? Cores.background : Cores.text};
+    props.$coresMode === 'primary' ? Cores.text : Cores.background};
   border: none;
 `
 
