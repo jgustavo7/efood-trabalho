@@ -1,4 +1,3 @@
-import Header from '../../components/Header'
 import CardPerfil from '../../components/CardPerfil'
 import ProductPerfil from '../../models/ProductPerfil'
 
@@ -6,6 +5,7 @@ import comida from '../../assets/imagens/pizza.png'
 
 import { PerfilContainer } from './styles'
 import Banner from '../../components/Banner'
+import HeaderPerfil from '../../components/HeaderPerfil'
 
 const comidas: ProductPerfil[] = [
   {
@@ -74,7 +74,7 @@ const Perfil = () => {
   return (
     <>
       <PerfilContainer>
-        <Header title="restaurantes" />
+        <HeaderPerfil title="Restaurantes" />
         <Banner />
         <CardPerfil product={comidas} />
       </PerfilContainer>

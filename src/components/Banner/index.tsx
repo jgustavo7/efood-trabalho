@@ -4,10 +4,7 @@ import bannerImg from '../../assets/imagens/banner-perfil.png'
 import { Container } from '../../styles'
 
 const Banner = () => (
-  <BannerContainer
-    className="container"
-    style={{ backgroundImage: `url(${bannerImg})` }}
-  >
+  <BannerContainer style={{ backgroundImage: `url(${bannerImg})` }}>
     <div className="container">
       <SubTitle>Italiana</SubTitle>
       <div>

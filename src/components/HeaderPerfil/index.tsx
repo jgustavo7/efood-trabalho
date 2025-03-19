@@ -13,20 +13,18 @@ import logo from '../../assets/imagens/logo.svg'
 import { Container } from '../../styles'
 
 export type HeaderProps = {
-  textContent?: string
+  title?: string
 }
 
-const Header = ({ textContent }: HeaderProps) => (
+const HeaderPerfil = ({ title }: HeaderProps) => (
   <HeaderContainer>
     <Container>
       <Link to="/">
         <img src={logo} alt="efood" />
       </Link>
-      <TextContainer>
-        <Text>{textContent}</Text>
-      </TextContainer>
     </Container>
+    <TitleLink to="/">{title}</TitleLink>
   </HeaderContainer>
 )
 
-export default Header
+export default HeaderPerfil
