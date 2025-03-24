@@ -31,6 +31,8 @@ export const HeroHeader = styled.div`
 `
 
 export const Title = styled.h1`
+  color: ${Cores.text};
+  padding-left: 840px;
   font-size: 18px;
   font-weight: 900;
   cursor: pointer;
@@ -41,7 +43,7 @@ export const TitleLink = styled(Link)`
   font-size: 18px;
   text-decoration: none;
   font-weight: 900;
-  margin-right: 800px;
+  padding-right: 998px;
 `
 
 export const TextContainer = styled.div`

@@ -24,6 +24,7 @@ const HeaderPerfil = ({ title }: HeaderProps) => (
       </Link>
     </Container>
     <TitleLink to="/">{title}</TitleLink>
+    <Title>Produto(s) no carrinho</Title>
   </HeaderContainer>
 )
 

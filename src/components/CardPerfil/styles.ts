@@ -6,7 +6,7 @@ export const ContainerListPerfil = styled.main`
 `
 
 export const CardListContainer = styled.div`
-  padding: 80px 80px 120px;
+  padding: 80px 120px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

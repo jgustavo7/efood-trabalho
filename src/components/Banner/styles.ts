@@ -35,7 +35,7 @@ export const Title = styled.h1`
   font-size: 32px;
   font-weight: 900;
   padding-top: 180px;
-  padding-left: 80px;
+  padding-left: 120px;
 `
 
 export const SubTitle = styled.p`
@@ -44,5 +44,5 @@ export const SubTitle = styled.p`
   font-weight: 100;
   opacity: 0.8;
   padding-top: 10px;
-  padding-left: 80px;
+  padding-left: 120px;
 `
