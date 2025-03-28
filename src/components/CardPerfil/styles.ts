@@ -3,6 +3,7 @@ import { Cores } from '../../styles'
 
 export const ContainerListPerfil = styled.main`
   position: relative;
+  width: 100%;
 `
 
 export const CardListContainer = styled.div`
@@ -12,6 +13,7 @@ export const CardListContainer = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 32px;
   row-gap: 40px;
+  width: 100%;
   background-color: ${Cores.background};
 `
 

@@ -6,6 +6,7 @@ import comida from '../../assets/imagens/pizza.png'
 import { PerfilContainer } from './styles'
 import Banner from '../../components/Banner'
 import HeaderPerfil from '../../components/HeaderPerfil'
+import { ContainerPerfil } from '../../styles'
 
 const comidas: ProductPerfil[] = [
   {
@@ -74,9 +75,11 @@ const Perfil = () => {
   return (
     <>
       <PerfilContainer>
-        <HeaderPerfil title="Restaurantes" />
-        <Banner />
-        <CardPerfil product={comidas} />
+        <ContainerPerfil>
+          <HeaderPerfil title="Restaurantes" />
+          <Banner />
+          <CardPerfil product={comidas} />
+        </ContainerPerfil>
       </PerfilContainer>
     </>
   )

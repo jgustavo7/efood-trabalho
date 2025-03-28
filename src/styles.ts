@@ -17,6 +17,15 @@ export const Container = styled.div`
   align-items: center;
 `
 
+export const ContainerPerfil = styled.div`
+  max-width: 1980px;
+  min-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  position: relative;
+`
+
 export const Cores = {
   primary: '#FFEBD9',
   text: '#E66767',
