@@ -18,8 +18,8 @@ export const Container = styled.div`
 `
 
 export const ContainerPerfil = styled.div`
-  max-width: 1980px;
-  min-width: 768px;
+  max-width: 1920px;
+  min-width: 1080px;
   width: 100%;
   margin: 0 auto;
   align-items: center;

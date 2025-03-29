@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Container, Cores } from '../../styles'
 
 export const BannerContainer = styled.div`
-  width: 100%;
+  width: 1340px;
   height: 280px;
   padding: 25px 0 32px;
   display: block;

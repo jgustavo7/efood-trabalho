@@ -3,7 +3,7 @@ import { Cores } from '../../styles'
 
 export const ContainerListPerfil = styled.main`
   position: relative;
-  width: 100%;
+  width: 1340px;
 `
 
 export const CardListContainer = styled.div`
