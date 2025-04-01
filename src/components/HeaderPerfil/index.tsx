@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import {
   HeaderContainer,
   HeroHeader,
+  Links,
   Text,
   TextContainer,
   Title,
@@ -22,9 +23,13 @@ const HeaderPerfil = ({ title }: HeaderProps) => (
       <Link to="/">
         <img src={logo} alt="efood" />
       </Link>
+      <nav>
+        <Links>
+          <TitleLink to="/">{title}</TitleLink>
+          <Title>Produto(s) no carrinho</Title>
+        </Links>
+      </nav>
     </Container>
-    <TitleLink to="/">{title}</TitleLink>
-    <Title>Produto(s) no carrinho</Title>
   </HeaderContainer>
 )
 

@@ -30,9 +30,9 @@ export const HeroHeader = styled.div`
   width: 100%;
 `
 
-export const Title = styled.h1`
+export const Title = styled.li`
   color: ${Cores.text};
-  padding-left: 840px;
+  padding-left: 490px;
   font-size: 18px;
   font-weight: 900;
   cursor: pointer;
@@ -40,10 +40,15 @@ export const Title = styled.h1`
 
 export const TitleLink = styled(Link)`
   color: ${Cores.text};
+  display: flex;
   font-size: 18px;
   text-decoration: none;
   font-weight: 900;
-  padding-right: 998px;
+  padding-right: 240px;
+`
+
+export const Links = styled.ul`
+  display: flex;
 `
 
 export const TextContainer = styled.div`
