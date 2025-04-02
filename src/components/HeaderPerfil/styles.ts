@@ -33,7 +33,8 @@ export const HeroHeader = styled.div`
 
 export const Title = styled.li`
   color: ${Cores.text};
-  padding-left: 490px;
+  display: flex;
+  padding-left: 480px;
   font-size: 18px;
   font-weight: 900;
   cursor: pointer;
