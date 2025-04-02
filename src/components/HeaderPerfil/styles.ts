@@ -19,6 +19,7 @@ export const HeaderContainer = styled.header`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
   }
 `
 
@@ -36,6 +37,7 @@ export const Title = styled.li`
   font-size: 18px;
   font-weight: 900;
   cursor: pointer;
+  text-decoration: none;
 `
 
 export const TitleLink = styled(Link)`
@@ -44,7 +46,7 @@ export const TitleLink = styled(Link)`
   font-size: 18px;
   text-decoration: none;
   font-weight: 900;
-  padding-right: 240px;
+  padding-right: 230px;
 `
 
 export const Links = styled.ul`

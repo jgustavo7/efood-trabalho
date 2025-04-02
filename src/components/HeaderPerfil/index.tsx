@@ -19,17 +19,17 @@ export type HeaderProps = {
 
 const HeaderPerfil = ({ title }: HeaderProps) => (
   <HeaderContainer>
-    <Container>
-      <Link to="/">
-        <img src={logo} alt="efood" />
-      </Link>
-      <nav>
+    <HeroHeader>
+      <Container>
+        <Link to="/">
+          <img src={logo} alt="efood" />
+        </Link>
         <Links>
           <TitleLink to="/">{title}</TitleLink>
           <Title>Produto(s) no carrinho</Title>
         </Links>
-      </nav>
-    </Container>
+      </Container>
+    </HeroHeader>
   </HeaderContainer>
 )
 
