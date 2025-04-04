@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Cores } from '../../styles'
 
 export const FooterContainer = styled.footer`
-  width: 1340px;
+  width: 1346px;
   padding: 40px 0;
   display: flex;
   flex-direction: column;

@@ -4,7 +4,7 @@ import { Container } from '../../styles'
 import { Cores } from '../../styles'
 
 export const HeaderContainer = styled.header`
-  width: 1340px;
+  width: 1344px;
   padding: 64px 0 40px;
   display: flex;
   flex-direction: column;
