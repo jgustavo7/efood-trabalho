@@ -47,7 +47,7 @@ export const TitleLink = styled(Link)`
   font-size: 18px;
   text-decoration: none;
   font-weight: 900;
-  padding-right: 250px;
+  padding-right: 240px;
 `
 
 export const Links = styled.ul`
