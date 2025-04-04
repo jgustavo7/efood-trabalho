@@ -10,6 +10,7 @@ export const BannerContainer = styled.div`
   position: relative;
   opacity: 0.7;
 
+
   .container {
     position: absolute;
     top: 0;
