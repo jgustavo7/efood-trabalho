@@ -4,7 +4,7 @@ import { Container } from '../../styles'
 import { Cores } from '../../styles'
 
 export const HeaderContainer = styled.header`
-  width: 1340px;
+  width: 1400px;
   padding: 64px 0 40px;
   display: flex;
   flex-direction: column;
@@ -48,7 +48,7 @@ export const TitleLink = styled(Link)`
   text-decoration: none;
   font-weight: 900;
   padding-right: 300px;
-  margin-right: 28px;
+  margin-right: 16px;
 `
 
 export const Links = styled.ul`
