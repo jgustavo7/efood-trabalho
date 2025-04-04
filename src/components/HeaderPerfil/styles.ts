@@ -47,25 +47,10 @@ export const TitleLink = styled(Link)`
   font-size: 18px;
   text-decoration: none;
   font-weight: 900;
-  padding-right: 230px;
+  padding-right: 300px;
+  margin-right: 28px;
 `
 
 export const Links = styled.ul`
   display: flex;
-`
-
-export const TextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
-export const Text = styled.h2`
-  max-width: 539px;
-  color: ${Cores.text};
-  text-align: center;
-  font-size: 36px;
-  font-weight: 900;
-  line-height: normal;
-  margin-top: 138px;
 `

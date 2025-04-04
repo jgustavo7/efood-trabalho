@@ -1,14 +1,6 @@
 import { Link } from 'react-router-dom'
 
-import {
-  HeaderContainer,
-  HeroHeader,
-  Links,
-  Text,
-  TextContainer,
-  Title,
-  TitleLink
-} from './styles'
+import { HeaderContainer, HeroHeader, Links, Title, TitleLink } from './styles'
 
 import logo from '../../assets/imagens/logo.svg'
 import { Container } from '../../styles'
@@ -19,17 +11,15 @@ export type HeaderProps = {
 
 const HeaderPerfil = ({ title }: HeaderProps) => (
   <HeaderContainer>
-    <HeroHeader>
-      <Container>
-        <Link to="/">
-          <img src={logo} alt="efood" />
-        </Link>
-        <Links>
-          <TitleLink to="/">{title}</TitleLink>
-          <Title>Produto(s) no carrinho</Title>
-        </Links>
-      </Container>
-    </HeroHeader>
+    <Container>
+      <Link to="/">
+        <img src={logo} alt="efood" />
+      </Link>
+    </Container>
+    <Links>
+      <TitleLink to="/">{title}</TitleLink>
+      <Title>Produto(s) no carrinho</Title>
+    </Links>
   </HeaderContainer>
 )
 
