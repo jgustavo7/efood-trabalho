@@ -12,7 +12,7 @@ import {
   Title
 } from './styles'
 
-type CardProps = {
+export type CardProps = {
   card: 'primary' | 'second'
   kindButton: 'button' | 'link'
   title: string
@@ -22,9 +22,8 @@ type CardProps = {
   iconName?: string
   rating?: string
   tagType?: string | undefined
-  tagHighlight: boolean | undefined
+  tagHighlight?: boolean | undefined
   to?: string
-  image: string
   handleClick?: () => void
 }
 

@@ -1,14 +1,25 @@
-import Product from '../../models/Product'
 import Card from '../Card'
 
 import Star from '../../assets/icons/estrela.svg'
 import { CardListContainer } from './styles'
+import { Product } from '../../pages/Home'
 
-type Props = {
+export type Props = {
   product: Product[]
 }
 
-const CardHome = ({ product }: Props) => (
+const CardHome = ({ product }: Props) => {
+  const getProductTags = (product: Product) => {
+    const tags = []
+
+    if (product.id) {
+      tags.push(product.id)
+    }
+
+    return tags
+  }
+
+  return (
   <CardListContainer>
     {product.map((product) => (
       <div key={product.id}>
@@ -19,17 +30,17 @@ const CardHome = ({ product }: Props) => (
           nameButton="Sabia Mais"
           to={`/perfil/${product.id}`}
           iconName={Star}
-          title={product.title}
-          description={product.description}
-          rating={product.rating}
-          tagType={product.tagType}
-          tagHighlight={product.tagHighlight}
-          cover={product.cover}
-          image={''}
+          title={product.titulo}
+          description={product.descricao}
+          rating={product.avaliacao}
+          tagType={product.tipo}
+          tagHighlight={product.destacado}
+          cover={product.capa}
         />
       </div>
     ))}
   </CardListContainer>
 )
+}
 
 export default CardHome

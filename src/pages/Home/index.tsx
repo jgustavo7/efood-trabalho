@@ -1,112 +1,77 @@
 import CardHome from '../../components/CardHome'
-import Product from '../../models/Product'
-import Header from '../../components/Header'
 
-import restaurante from '../../assets/imagens/restaurante.png'
+import Header from '../../components/Header'
 
 import { Container } from '../../styles'
 import { HomeContainer } from './styles'
+import { useEffect, useState } from 'react'
 
-const restaurantes: Product[] = [
-  {
-    id: 1,
-    card: 'primary',
-    kindButton: 'button',
-    title: 'La Dolce Vita Trattoria',
-    cover: restaurante,
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    nameButton: 'Saiba mais',
-    iconName: 'Italiana',
-    rating: '5.0',
-    tagType: 'italiana',
-    tagHighlight: true,
-    to: 'link'
-  },
-  {
-    id: 2,
-    card: 'primary',
-    kindButton: 'button',
-    title: 'La Dolce Vita Trattoria',
-    cover: restaurante,
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    nameButton: 'Saiba mais',
-    iconName: 'Italiana',
-    rating: '5.0',
-    tagType: 'italiana',
-    tagHighlight: false,
-    to: 'link'
-  },
-  {
-    id: 3,
-    card: 'primary',
-    kindButton: 'button',
-    title: 'La Dolce Vita Trattoria',
-    cover: restaurante,
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    nameButton: 'Saiba mais',
-    iconName: 'Italiana',
-    rating: '5.0',
-    tagType: 'italiana',
-    tagHighlight: false,
-    to: 'link'
-  },
-  {
-    id: 4,
-    card: 'primary',
-    kindButton: 'button',
-    title: 'La Dolce Vita Trattoria',
-    cover: restaurante,
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    nameButton: 'Saiba mais',
-    iconName: 'Italiana',
-    rating: '5.0',
-    tagType: 'italiana',
-    tagHighlight: false,
-    to: 'link'
-  },
-  {
-    id: 5,
-    card: 'primary',
-    kindButton: 'button',
-    title: 'La Dolce Vita Trattoria',
-    cover: restaurante,
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    nameButton: 'Saiba mais',
-    iconName: 'Italiana',
-    rating: '5.0',
-    tagType: 'italiana',
-    tagHighlight: false,
-    to: 'link'
-  },
-  {
-    id: 6,
-    card: 'primary',
-    kindButton: 'button',
-    title: 'La Dolce Vita Trattoria',
-    cover: restaurante,
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    nameButton: 'Saiba mais',
-    iconName: 'Italiana',
-    rating: '5.0',
-    tagType: 'italiana',
-    tagHighlight: false,
-    to: 'link'
-  }
-]
+export type Product = {
+  id: number
+  titulo: string
+  destacado: boolean | undefined
+  tipo: string
+  avaliacao: string
+  descricao: string
+  capa: string
+  cardapio: {
+      foto: string
+      preco: number
+      id: number
+      nome: string
+      descricao: string
+      porcao: string
+    }
+}
 
-const Home = () => (
-  <HomeContainer>
-    <Header textContent="Viva experiencias gastronomicas no conforto da sua casa" />
-    <Container>
-      <CardHome product={restaurantes} />
-    </Container>
-  </HomeContainer>
-)
+const Restaurantes = () => {
+  const [bella, setBella] = useState<Product[]>([])
+  const [arabe, setArabe] = useState<Product[]>([])
+  const [japones, setJapones] = useState<Product[]>([])
+  const [portugues, setPortugues] = useState<Product[]>(
+    []
+  )
+  const [pizzaria, setPizzaria] = useState<Product[]>([])
+  const [vegano, setVegano] = useState<Product[]>([])
+
+  useEffect(() => {
+    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
+      .then((res) => res.json())
+      .then((res) => setBella(res))
+
+    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
+      .then((res) => res.json())
+      .then((res) => setArabe(res))
+
+    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
+      .then((res) => res.json())
+      .then((res) => setJapones(res))
+
+    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
+      .then((res) => res.json())
+      .then((res) => setPortugues(res))
+
+    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
+      .then((res) => res.json())
+      .then((res) => setPizzaria(res))
+
+    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
+      .then((res) => res.json())
+      .then((res) => setVegano(res))
+  })
+}
+
+const Home = () => {
+  return (
+    <>
+      <HomeContainer>
+        <Header textContent="Viva experiencias gastronomicas no conforto da sua casa" />
+        <Container>
+          <CardHome product={} />
+        </Container>
+      </HomeContainer>
+    </>
+  )
+}
 
 export default Home
