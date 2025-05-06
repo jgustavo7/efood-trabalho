@@ -20,27 +20,27 @@ const CardHome = ({ product }: Props) => {
   }
 
   return (
-  <CardListContainer>
-    {product.map((product) => (
-      <div key={product.id}>
-        <Card
-          key={product.id}
-          card="primary"
-          kindButton="link"
-          nameButton="Sabia Mais"
-          to={`/perfil/${product.id}`}
-          iconName={Star}
-          title={product.titulo}
-          description={product.descricao}
-          rating={product.avaliacao}
-          tagType={product.tipo}
-          tagHighlight={product.destacado}
-          cover={product.capa}
-        />
-      </div>
-    ))}
-  </CardListContainer>
-)
+    <CardListContainer>
+      {product.map((product) => (
+        <div key={product.id}>
+          <Card
+            key={product.id}
+            card="primary"
+            kindButton="link"
+            nameButton="Sabia Mais"
+            to={`/perfil/${product.id}`}
+            iconName={Star}
+            title={product.titulo}
+            description={product.descricao}
+            rating={product.avaliacao}
+            tagType={product.tipo}
+            tagHighlight={product.destacado}
+            cover={product.capa}
+          />
+        </div>
+      ))}
+    </CardListContainer>
+  )
 }
 
 export default CardHome

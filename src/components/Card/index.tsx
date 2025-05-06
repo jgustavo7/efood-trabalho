@@ -39,7 +39,6 @@ const Card = ({
   tagType,
   tagHighlight,
   to,
-  image,
   handleClick
 }: CardProps) => {
   function renderTypeButton(kind: string) {

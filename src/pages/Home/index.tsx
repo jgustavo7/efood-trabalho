@@ -15,59 +15,30 @@ export type Product = {
   descricao: string
   capa: string
   cardapio: {
-      foto: string
-      preco: number
-      id: number
-      nome: string
-      descricao: string
-      porcao: string
-    }
+    foto: string
+    preco: number
+    id: number
+    nome: string
+    descricao: string
+    porcao: string
+  }
 }
 
-const Restaurantes = () => {
-  const [bella, setBella] = useState<Product[]>([])
-  const [arabe, setArabe] = useState<Product[]>([])
-  const [japones, setJapones] = useState<Product[]>([])
-  const [portugues, setPortugues] = useState<Product[]>(
-    []
-  )
-  const [pizzaria, setPizzaria] = useState<Product[]>([])
-  const [vegano, setVegano] = useState<Product[]>([])
+const Home = () => {
+  const [restaurantes, setRestaurantes] = useState<Product[]>([])
 
   useEffect(() => {
     fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
       .then((res) => res.json())
-      .then((res) => setBella(res))
+      .then((res) => setRestaurantes(res))
+  }, [])
 
-    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
-      .then((res) => res.json())
-      .then((res) => setArabe(res))
-
-    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
-      .then((res) => res.json())
-      .then((res) => setJapones(res))
-
-    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
-      .then((res) => res.json())
-      .then((res) => setPortugues(res))
-
-    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
-      .then((res) => res.json())
-      .then((res) => setPizzaria(res))
-
-    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
-      .then((res) => res.json())
-      .then((res) => setVegano(res))
-  })
-}
-
-const Home = () => {
   return (
     <>
       <HomeContainer>
         <Header textContent="Viva experiencias gastronomicas no conforto da sua casa" />
         <Container>
-          <CardHome product={} />
+          <CardHome product={restaurantes} />
         </Container>
       </HomeContainer>
     </>

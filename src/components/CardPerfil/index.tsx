@@ -9,7 +9,9 @@ export type Props = {
 }
 
 const CardPerfil = ({ product }: Props) => {
-  const [selectedProductId, setSelectedProductId] = useState<number | null>(null)
+  const [selectedProductId, setSelectedProductId] = useState<number | null>(
+    null
+  )
   const [showModal, setShowModal] = useState(false)
 
   function handleCardClick(productId: number) {
@@ -18,22 +20,23 @@ const CardPerfil = ({ product }: Props) => {
   }
 
   return (
-  <ContainerListPerfil>
-    <CardListContainer>
-      {product.map((product) => (
-        <Card
-          key={product.id}
-          card="second"
-          kindButton="button"
-          nameButton="Adicionar ao carrinho"
-          title={product.cardapio.nome}
-          description={product.cardapio.descricao}
-          cover={product.cardapio.foto}
-          handleClick={() => handleCardClick(product.id)}
+    <ContainerListPerfil>
+      <CardListContainer>
+        {product.map((product) => (
+          <Card
+            key={product.id}
+            card="second"
+            kindButton="button"
+            nameButton="Adicionar ao carrinho"
+            title={product.cardapio.nome}
+            description={product.cardapio.descricao}
+            cover={product.cardapio.foto}
+            handleClick={() => handleCardClick(product.id)}
           />
         ))}
-    </CardListContainer>
-  </ContainerListPerfil>
-)}
+      </CardListContainer>
+    </ContainerListPerfil>
+  )
+}
 
 export default CardPerfil
