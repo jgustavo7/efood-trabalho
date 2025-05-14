@@ -5,12 +5,29 @@ import Banner from '../../components/Banner'
 import HeaderPerfil from '../../components/HeaderPerfil'
 import { ContainerPerfil } from '../../styles'
 import { useEffect, useState } from 'react'
-import { Product } from '../Home'
 import { useParams } from 'react-router-dom'
+
+export type Restaurante = {
+  id: number
+  titulo: string
+  destacado: boolean | undefined
+  tipo: string
+  avaliacao: string
+  descricao: string
+  capa: string
+  cardapio: {
+    foto: string
+    preco: number
+    id: number
+    nome: string
+    descricao: string
+    porcao: string
+  }
+}
 
 const Perfil = () => {
   const { id } = useParams()
-  const [restaurante, setRestaurante] = useState<Product[]>([])
+  const [restaurante, setRestaurante] = useState<Restaurante[]>([])
 
   useEffect(() => {
     fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
@@ -24,7 +41,7 @@ const Perfil = () => {
         <ContainerPerfil>
           <HeaderPerfil title="Restaurantes" />
           <Banner />
-          <CardPerfil product={restaurante} />
+          <CardPerfil restaurante={restaurante} />
         </ContainerPerfil>
       </PerfilContainer>
     </>

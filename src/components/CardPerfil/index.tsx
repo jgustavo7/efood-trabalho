@@ -1,14 +1,14 @@
 import { useState } from 'react'
-import { Product } from '../../pages/Home'
 import Card from '../Card'
 
 import { CardListContainer, ContainerListPerfil, TextMessage } from './styles'
+import { Restaurante } from '../../pages/Perfil'
 
 export type Props = {
-  product: Product[]
+  restaurante: Restaurante[]
 }
 
-const CardPerfil = ({ product }: Props) => {
+const CardPerfil = ({ restaurante }: Props) => {
   const [selectedProductId, setSelectedProductId] = useState<number | null>(
     null
   )
@@ -22,16 +22,16 @@ const CardPerfil = ({ product }: Props) => {
   return (
     <ContainerListPerfil>
       <CardListContainer>
-        {product.map((product) => (
+        {restaurante.map((restaurante) => (
           <Card
-            key={product.id}
+            key={restaurante.cardapio.id}
             card="second"
             kindButton="button"
             nameButton="Adicionar ao carrinho"
-            title={product.cardapio.nome}
-            description={product.cardapio.descricao}
-            cover={product.cardapio.foto}
-            handleClick={() => handleCardClick(product.id)}
+            title={restaurante.cardapio.nome}
+            description={restaurante.cardapio.descricao}
+            cover={restaurante.cardapio.foto}
+            handleClick={() => handleCardClick(restaurante.id)}
           />
         ))}
       </CardListContainer>
